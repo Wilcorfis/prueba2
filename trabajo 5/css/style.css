@@ -21,6 +21,7 @@
     margin: 0 50px;
     text-align: center;
     padding: 10px;
+    display: inline-flex;
 
 }
 
@@ -39,4 +40,8 @@
 
 .container-cards .tarjeta span {
     display: block;
+}
+
+.container-cards .tarjeta:nth-child(1) {
+    margin-right: 100px;
 }
