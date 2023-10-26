@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multimedia</title>
+</head>
+
+<body>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState == "complete") {
+
+                let video = document.getElementById("video");
+                video.innerHTML = '<video width="400" controls autoplay><source src="https://download.blender.org/peach/trailer/trailer_400p.ogg" type="video/ogg"></video>';
+                video.play();
+
+            }
+        }
+
+    </script>
+    <center>
+        <h1>Multimedia</h1>
+    </center>
+    <hr />
+    <h2>Importar imagenes</h2>
+    <img src="./imagenes/img1.avif" alt="imagen de perrito"
+        style="border-radius: 50%;opacity: 0.5; filter: brightness(50%);max-width: 50%;height: 200px;" loading="lazy" />
+    <img src="https://enduro21.com/images/2023/june-2023/beta-explorer-e-moto/beta_explorer_e-moto_30108.jpg"
+        alt="imagen externa" style="opacity: 0.5; filter: brightness(50%);max-width: 50%;height: 200px;"
+        loading="lazy" />
+    <figure>
+        <img src="./imagenes/img2.avif" alt="imagen"
+            style="opacity: 0.5; filter: brightness(50%);max-width: 50%;height: 200px;" loading="lazy">
+
+        <figcaption>
+            Perrito frances
+
+        </figcaption>
+    </figure>
+    <h2>Importar gif</h2>
+    <img src="./imagenes/giphy.gif" alt="esto es un gif" style="box-shadow: indigo;height: 200px;">
+
+    <h2>Importar videos</h2>
+    <video src="imagenes/video.mp4" controls height="200px" autoplay loop muted></video>
+    <h2>Importar videos sin sonido</h2>
+    <video src="imagenes/video.mp4" controls height="200px" muted poster="./imagenes/img4.avif"></video>
+
+    <h2>Importar videos de youtube</h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NnzwuAIEJVs?si=mNflxf-cwd3uUu_K"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <h2>importar un audio</h2>
+    <audio src="imagenes/audio.mp3" controls autoplay muted></audio>
+
+    <h2>subtitulos de video</h2>
+    <video src="./imagenes/video.mp4" controls height="200px">
+        <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" />
+    </video>
+
+    <div id="video"></div>
+
+
+
+    <p><strong>5.</strong> Enlace entre paginas</p>
+    <a href="./index.html">Volver</a>
+
+</body>
+
+</html>

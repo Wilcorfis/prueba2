@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="../styles/index.css">
+</head>
+<a href="../trabajo3/index.html">volver</a>
+
+<body>
+    <h1>formularios</h1>
+    <form action="../trabajo3/index.html" accept-charset="UTF-8" method="get">
+        <h2>encuesta</h2>
+        <div>
+            <label for="nombre">Nombre</label>
+            <input required id="nombre" name="nombre" type="text" placeholder="ejemplo pepito" autofocus>
+        </div>
+        <div>
+            <label for="date">Fecha</label>
+            <input required id="date" name="date" type="date">
+        </div>
+        <div>
+            <label for="edad">Edad</label>
+            <input required id="edad" name="edad" min="0" max="100" type="number" required>
+        </div>
+        <fieldset>
+            <legend>otras preguntas</legend>
+            <label for="casado">Casado</label>
+            <input id="casado" type="radio" name="opcion" value="casado" checked />
+            <label for="soltero">soltero</label>
+            <input id="soltero" type="radio" name="opcion" value="soltero" />
+            <label for="unionlibre">union libre</label>
+            <input id="unionlibre" type="radio" name="opcion" value="union libre" />
+        </fieldset>
+
+        <br />
+        <div>
+            <label for="">Color favorito</label>
+            <input type="color" id="color" name="color">
+        </div>
+        <br />
+        <div>
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" name="email" placeholder="ejm@correo.com" required>
+            <label for="password">Contraseña</label>
+            <input type="password" required name="password" id="password">
+        </div>
+        <br />
+        <div>
+            <label for="ciudad">ciudad</label>
+            <select id="ciudad" name="ciudad" required>
+                <option value="med">Medellin</option>
+                <option value="buc" selected>Bucaramanga</option>
+                <option value="cali">Cali</option>
+                <option value="per">Pereira</option>
+
+            </select>
+        </div>
+        <div>
+            <p>Descripcion</p>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" required
+                placeholder="descripcion"></textarea>
+        </div>
+        <!-- datetime-local
+        time
+    file
+hidden
+checkbox
+range
+url
+ -->
+        <button type="submit">Enviar</button>
+
+
+
+
+    </form>
+
+</body>
+
+</html>

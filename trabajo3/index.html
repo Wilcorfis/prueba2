@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipervinculos y multimedia</title>
+</head>
+
+<body>
+    <center>
+        <h1>Hipervinculos y multimedia</h1>
+    </center>
+    <hr />
+
+    <hr />
+    <h2>Hipervinculos</h2>
+    <p><strong>1.</strong> Enlace a otra pagina web</p>
+    <a href="http://www.youtube.com" target="_blank" rel="noopener noreferrer">Ir a youtube</a>
+    <p><strong>2.</strong> Enlace a un correo eletronico</p>
+    <a href="mailto:kevin.mejia@riwi.io">Enviar un correo</a>
+    <p><strong>3.</strong> Enlace a un correo eletronico</p>
+    <a href="./pdf/Untitled 1.pdf" download>Descargar archivo</a>
+    <p><strong>4.</strong> Enlace entre paginas</p>
+    <a href="./multimedia.html">Ir a apuntes</a>
+    <p><strong>5.</strong> Listas</p>
+    <a href="./listas.html">Ir a listas</a>
+    <p><strong>6.</strong> Tablas en html</p>
+    <a href="../trabajo 4 tablas/tablas.html">Ir a apuntes de tablas</a>
+    <p><strong>7.</strong> formularios en html</p>
+    <a href="../trabajo 4 tablas/formularios.html">Ir a apuntes de formularios</a>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('nombre')) {
+            const edad = urlParams.get('edad')
+            alert(edad);
+            const opcion = urlParams.get('opcion')
+            alert(opcion);
+            const nombre = urlParams.get('nombre')
+            alert(nombre);
+            const date = urlParams.get('date')
+            alert(date);
+            window.location = "./index.html"
+
+        }
+    </script>
+
+
+</body>
+
+</html>

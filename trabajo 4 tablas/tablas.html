@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*desastre*/
+        @keyframes anim {
+            0% {
+                background-color: #000;
+            }
+
+            /*Amarillo*/
+
+            50% {
+                background-color: #fff;
+            }
+
+            /*Negro*/
+
+        }
+
+        table {
+            transform: rotate(90deg);
+        }
+
+        tr {
+
+            transform: rotate(45deg);
+
+            animation-name: anim;
+            animation-duration: 0.1s;
+            animation-iteration-count: infinite;
+        }
+
+        tr {
+
+            transition: width 0.1s, height 0.1s;
+        }
+
+        tr:hover {
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+        }
+
+        /*desastre*/
+        table,
+        th,
+        td {
+            border: 2px solid darkblue;
+            border-collapse: collapse;
+            padding: 0 20px;
+            text-align: center;
+            box-shadow:
+                inset 0 -3em 3em rgba(0, 200, 0, 0.3),
+                0 0 0 2px white,
+                0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+
+
+        }
+
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px 0;
+
+        }
+    </style>
+</head>
+<a href="../trabajo3/index.html">Volver</a>
+<center>
+    <h1>tablas en HTML5</h1>
+</center>
+<h2>estructuras basicas de una tabla</h2>
+<table border="1">
+    <tr>
+        <td>item 1</td>
+        <td>item 2</td>
+        <td>item 3</td>
+        <td>item 4</td>
+    </tr>
+    <tr>
+        <td>product 1</td>
+        <td>product 2</td>
+        <td>product 3</td>
+        <td>product 4</td>
+    </tr>
+
+</table>
+<h2>estructuras de una tabla completa</h2>
+<table>
+    <thead>
+        <tr>
+            <th>nombre</th>
+            <th>edad</th>
+            <th>genero</th>
+            <th>ciudad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Santiago</td>
+            <td>25</td>
+            <td>Masculino</td>
+            <td>Medellin</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>
+                Total
+            </td>
+            <td colspan="3">
+                3
+
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<h2>tabla personalziada</h2>
+<table>
+    <thead>
+        <!-- cabecera de la tabla -->
+        <tr>
+            <th>#</th>
+            <th>imagen</th>
+            <th>nombre de mascota</th>
+            <th>video</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- cuerpo de la tabla -->
+        <tr>
+            <td rowspan="3">perros</td>
+            <td><img src="imagenes/img1.avif" alt="imagen de mascota" height="100px" loading="lazy"></td>
+            <td colspan="2">Jackmaster</td>
+
+        </tr>
+        <tr>
+
+            <td><img src="imagenes/img1.avif" alt="imagen de mascota" height="100px" loading="lazy"></td>
+            <td>Jackmaster</td>
+            <td><video src="./imagenes/video.mp4" controls height="100px"></video></td>
+
+        </tr>
+        <tr>
+
+            <td><img src="imagenes/img1.avif" alt="imagen de mascota" height="100px" loading="lazy"></td>
+            <td>Jackmaster</td>
+            <td><video src="./imagenes/video.mp4" controls height="100px"></video></td>
+
+        </tr>
+    </tbody>
+    <tfoot>
+        <!-- pie de la tabla -->
+        <tr>
+            <td>
+                Total
+            </td>
+            <td colspan="3">
+                3
+
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+
+<body>
+
+</body>
+
+</html>
