@@ -45,3 +45,33 @@
 .container-cards .tarjeta:nth-child(1) {
     margin-right: 100px;
 }
+
+.contenedor-cajas {
+    display: flex;
+    justify-content: center;
+    /*justify-content: space-between;*/
+    /*justify-content: space-around;*/
+    /*justify-content: space-evenly;*/
+    /* justify-content: flex-end; */
+    /* gap solo si estamos usando flex */
+    /* gap: 200px; */
+    flex-wrap: wrap;
+    /* cambia la direccion row o column*/
+    flex-direction: column;
+
+}
+
+.contenedor-cajas .cajas {
+    width: 100px;
+    height: 100px;
+    border: 10px solid black;
+    background: red;
+    display: flex;
+    color: azure;
+    font-size: 24px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
