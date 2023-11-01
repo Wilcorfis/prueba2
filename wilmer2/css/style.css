@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Gochi+Hand&family=IBM+Plex+Sans:ital,wght@0,100;0,200;1,100&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&family=Poppins:ital,wght@0,800;0,900;1,100;1,700;1,800;1,900&family=Tulpen+One&display=swap');
+
+/*
+font-family: 'Edu TAS Beginner', cursive;
+font-family: 'Gochi Hand', cursive;
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playpen Sans', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Tulpen One', sans-serif;
+    */
+
+/*escritorio xl* 1366 pixeles en adelante*/
+:root {
+    --succes: #ffb84d;
+    --dark: #131313;
+    --primary: rgb(242, 178, 46);
+    --ligth: #eaeaea;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+}
+
+.header .contlogo img {
+    height: 80px;
+}
+
+.header .contlogo p {
+    font-size: 35px;
+    font-family: 'Gochi Hand', cursive;
+    font-weight: bold;
+    color: var(--ligth);
+}
+
+.header .contlogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(120deg, var(--succes) 60%, var(--dark) 40%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.banner .banner-cont {
+    width: fit-content;
+
+}
+
+.banner .banner-cont h3 {
+    font-size: 40px;
+    color: var(--ligth);
+}
+
+.banner .banner-cont p {
+    font-size: 18px;
+    color: #9e9898;
+    width: 600px;
+    margin-bottom: 40px;
+}
+
+.banner .banner-cont .btn-home {
+    background: #ff2e02;
+    padding: 10px 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--ligth);
+    border-radius: 6px;
+    font-size: 28px;
+    border: 2px solid #ff2e02;
+    transition: 0.3s;
+
+}
+
+.banner .banner-cont .btn-home:hover {
+    background: transparent;
+    color: #ffffff;
+}
+
+.banner .banner-img img {
+    width: 95%;
+    margin-top: 100px;
+    max-width: 700px;
+    animation: animation-img-banner 20s linear infinite;
+}
+
+.banner .banner-cont h2 {
+    font-size: 90px;
+    color: var(--ligth);
+}
+
+.header .nav-bar a {
+    border: 2px solid var(--primary);
+    padding: 3px 10px;
+    border-radius: 10px;
+    color: var(--primay);
+    font-size: 20px;
+    margin-right: 10px;
+    transition: 0.5s all;
+}
+
+.header .nav-bar a:hover {
+    background: var(--primary);
+    color: var(--dark);
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Edu TAS Beginner', cursive;
+}
+
+body {
+    min-height: 100vh;
+    text-decoration: none;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+/*moviles revisamos de 768 pixeles hacia abajo*/
+@media (max-width:768px) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--dark);
+    }
+
+    .header .nav-bar {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: var(--dark);
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        z-index: 200;
+    }
+
+    .navbar-mobile a {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        padding: 10px;
+        background: var(--succes);
+        border: 2px solid var(--succes);
+        color: var(--dark);
+        font-weight: bold;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .navbar-mobile a:hover {
+        background: var(--black);
+        color: var(--succes);
+        font-weight: bold;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 150px;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .banner .banner-cont h3 {
+        font-size: 30px;
+        margin-top: 30px;
+
+    }
+
+    .banner .banner-cont h2 {
+        font-size: 40px;
+
+    }
+
+    .banner .banner-cont p {
+        width: auto;
+    }
+
+    .banner .banner-cont {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .banner .banner-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 100px;
+
+    }
+}
+
+@keyframes animation-img-banner {
+    100% {
+        transform: rotate(360deg);
+    }
+}
